@@ -533,6 +533,59 @@ transition: background 250ms var(--timing-function) ;
   fill: var(--white-icon-color); 
   
 }
+
+.backdrop{
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.2);
+
+  transition: opacity 250ms var(--timing-function);
+
+}
+
+.backdrop.is-hidden{
+ opacity: 0;  
+ visibility: hidden;
+ pointer-events: none;
+ transition: opacity  2500ms var(--timing-function);
+}
+
+.modal{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  width: 528px;
+  height: 581px;
+  background-color: var(--white-text-color);
+  border-radius: 4px;
+  box-shadow:
+    0px 2px 1px rgba(0, 0, 0, 0.2),
+    0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 1px 3px rgba(0, 0, 0, 0.12);
+   
+
+}
+.modal-close-button{
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  
+  width: 30px;
+  height: 30px;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 50%;
+
+}
+
+.modal-close-button:hover{
+  cursor: pointer;
+  }
+
 /* porfolio */
 .section-portfolio {
   padding-top: 94px;
@@ -630,7 +683,8 @@ transition: background 250ms var(--timing-function) ;
 .portfolio-dimove{
   position: relative;
   overflow: hidden;
-   
+  height: 294px;
+  width: 370px;   
 }
 
 .portfolio-img {
